@@ -1,15 +1,15 @@
 services:
-  # Web service for Streamlit dashboard
   - type: web
     name: kraken-dashboard
     env: python
     buildCommand: "pip install -r requirements.txt && python init_db.py"
     startCommand: "streamlit run dashboard.py --server.port $PORT --server.address 0.0.0.0"
-    
-  # Cron job for data fetching every 5 minutes
+    plan: free
+
   - type: cron
     name: kraken-fetcher  
     env: python
     buildCommand: "pip install -r requirements.txt && python init_db.py"
     startCommand: "python fetchandstore.py"
     schedule: "*/5 * * * *"
+    plan: free
