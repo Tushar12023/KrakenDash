@@ -4,7 +4,7 @@ name: Test Cron Trigger
 
 on:
   schedule:
-    - cron: '* * * * * *'
+    - cron: '* * * * *'
 
 jobs:
   test:
