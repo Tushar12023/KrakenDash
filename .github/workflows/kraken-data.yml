@@ -24,10 +24,10 @@ jobs:
         pip install -r requirements.txt
 
     - name: Initialize database
-      run: python create_db.py
+      run: python init_db.py
 
     - name: Fetch and store data
-      run: python fetch_data.py
+      run: python fetch_and_store.py
 
     - name: Commit database changes
       run: |
