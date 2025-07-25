@@ -12,4 +12,4 @@ services:
     buildCommand: "pip install -r requirements.txt && python init_db.py"
     startCommand: "python fetchandstore.py"
     schedule: "*/5 * * * *"
-    plan: free
+    # No 'plan: free' because cron jobs likely require paid plan
