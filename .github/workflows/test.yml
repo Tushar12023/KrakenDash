@@ -1,0 +1,15 @@
+# .github/workflows/test-cron.yml
+
+name: Test Cron Trigger
+
+on:
+  schedule:
+    - cron: '*/* * * * *'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print timestamp
+        run: date
+
