@@ -3,8 +3,8 @@ import streamlit as st
 from datetime import datetime, timedelta
 
 DB_FILE = "kraken_data.db"
-TIME_WINDOWS = [1, 2, 3]  # In multiples of CRON_INTERVAL
-CRON_INTERVAL = 5  # How often your script runs (in minutes)
+TIME_WINDOWS = [1, 2, 3,4,5,6,7,8]  # In multiples of CRON_INTERVAL
+CRON_INTERVAL = 15  # How often your script runs (in minutes)
 WINDOW = [w * CRON_INTERVAL for w in TIME_WINDOWS]  # [5, 10, 15]
 
 # Streamlit Page Config
